@@ -17,7 +17,7 @@ public class ConfigCenterDemo {
 
 	// 1 将单个配置放到zookeeper上
 	public void put2Zk() {
-		ZkClient client = new ZkClient("localhost:2181");
+		ZkClient client = new ZkClient("192.168.56.101:2181");
 		client.setZkSerializer(new MyZkSerializer());
 		String configPath = "/config1";
 		String value = "1111111";
@@ -38,7 +38,7 @@ public class ConfigCenterDemo {
 		fin.read(datas);
 		fin.close();
 
-		ZkClient client = new ZkClient("localhost:2181");
+		ZkClient client = new ZkClient("192.168.56.101:2181");
 		client.setZkSerializer(new BytesPushThroughSerializer());
 		String configPath = "/config2";
 		if (client.exists(configPath)) {
@@ -51,7 +51,7 @@ public class ConfigCenterDemo {
 
 	// 需要配置的服务都从zk上取，并注册watch来实时获得配置更新
 	public void getConfigFromZk() {
-		ZkClient client = new ZkClient("localhost:2181");
+		ZkClient client = new ZkClient("192.168.56.101:2181");
 		client.setZkSerializer(new MyZkSerializer());
 		String configPath = "/config1";
 		String value = client.readData(configPath);

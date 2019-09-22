@@ -36,6 +36,7 @@ public class ZKDistributeImproveLock implements Lock {
 		this.lockPath = lockPath;
 		client = new ZkClient("localhost:2181");
 		client.setZkSerializer(new MyZkSerializer());
+		// 创建一个持久节点，然后在这个节点下面创建临时顺序节点
 		if (!this.client.exists(lockPath)) {
 			try {
 				this.client.createPersistent(lockPath);

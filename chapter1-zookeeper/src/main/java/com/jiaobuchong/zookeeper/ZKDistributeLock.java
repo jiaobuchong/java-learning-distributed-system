@@ -11,6 +11,9 @@ import org.I0Itec.zkclient.IZkDataListener;
 import org.I0Itec.zkclient.ZkClient;
 import org.I0Itec.zkclient.exception.ZkNodeExistsException;
 
+/**
+ * 这种实现方式适用于并发比较小的情况
+ */
 public class ZKDistributeLock implements Lock {
 
 	private String lockPath;

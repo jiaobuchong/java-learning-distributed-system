@@ -18,6 +18,7 @@
     </properties>
 
     <dependencies>
+<!--        两个客户端-->
         <!-- https://mvnrepository.com/artifact/org.apache.zookeeper/zookeeper -->
         <dependency>
             <groupId>org.apache.zookeeper</groupId>

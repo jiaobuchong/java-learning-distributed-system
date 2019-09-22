@@ -10,8 +10,14 @@ public class MasterElectionDemo {
 
 	static class Server {
 
+		/**
+		 * 集群名称，节点名称，节点地址
+		 */
 		private String cluster, name, address;
 
+		/**
+		 * 争抢的主节点名称，和值
+		 */
 		private final String path, value;
 
 		private String master;
@@ -24,9 +30,11 @@ public class MasterElectionDemo {
 			path = "/" + this.cluster + "Master";
 			value = "name:" + name + " address:" + address;
 
-			ZkClient client = new ZkClient("localhost:2181");
+			ZkClient client = new ZkClient("192.168.56.101:2181");
 			client.setZkSerializer(new MyZkSerializer());
 
+			// 选举过程是要一直存在的
+			// 可以开启一个守护线程
 			new Thread(new Runnable() {
 
 				@Override
@@ -86,9 +94,9 @@ public class MasterElectionDemo {
 
 	public static void main(String[] args) {
 		// 测试时，依次开启多个Server实例java进程，然后停止获取的master的节点，看谁抢到Master
-		// Server s = new Server("cluster1", "server1", "192.168.1.11:8991");
-		// Server s = new Server("cluster1", "server2", "192.168.1.11:8992");
-		Server s = new Server("cluster1", "server3", "192.168.1.11:8993");
+//		 Server s = new Server("cluster1", "server1", "192.168.1.11:8991");
+		 Server s = new Server("cluster1", "server2", "192.168.1.11:8992");
+//		Server s = new Server("cluster1", "server3", "192.168.1.11:8993");
 		// Server s = new Server("cluster1", "server4", "192.168.1.11:8994");
 	}
 
