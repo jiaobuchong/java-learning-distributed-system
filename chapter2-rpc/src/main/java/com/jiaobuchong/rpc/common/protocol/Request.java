@@ -11,14 +11,18 @@ public class Request implements Serializable {
 	 */
 	private static final long serialVersionUID = -5200571424236772650L;
 
+	// 服务名称
 	private String serviceName;
 
+	// 调用方法名
 	private String method;
 
 	private Map<String, String> headers = new HashMap<String, String>();
 
+	// 方法参数类型
 	private Class<?>[] prameterTypes;
 
+	// 方法参数值
 	private Object[] parameters;
 
 	public String getServiceName() {

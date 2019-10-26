@@ -2,10 +2,13 @@ package com.jiaobuchong.rpc.discovery;
 
 public class ServiceInfo {
 
+	// 服务名称
 	private String name;
 
+	// 消息协议
 	private String protocol;
 
+	// 服务端 ip 地址
 	private String address;
 
 	public String getName() {

@@ -11,6 +11,9 @@ import com.jiaobuchong.rpc.server.register.ServiceRegister;
 import com.jiaobuchong.rpc.server.register.ZookeeperExportServiceRegister;
 import com.jiaobuchong.rpc.util.PropertiesUtils;
 
+/**
+ * 服务提供者
+ */
 public class Provider {
 	public static void main(String[] args) throws Exception {
 

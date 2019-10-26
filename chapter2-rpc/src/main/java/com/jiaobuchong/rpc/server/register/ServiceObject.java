@@ -2,10 +2,13 @@ package com.jiaobuchong.rpc.server.register;
 
 public class ServiceObject {
 
+	// 服务名称
 	private String name;
 
+	// 服务接口
 	private Class<?> interf;
 
+	// 服务具体实现类 bean
 	private Object obj;
 
 	public ServiceObject(String name, Class<?> interf, Object obj) {

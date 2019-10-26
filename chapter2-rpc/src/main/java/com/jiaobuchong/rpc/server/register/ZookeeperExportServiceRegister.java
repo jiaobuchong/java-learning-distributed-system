@@ -53,10 +53,12 @@ public class ZookeeperExportServiceRegister extends DefaultServiceRegister imple
 		if (!client.exists(servicePath)) {
 			client.createPersistent(servicePath, true);
 		}
+		// 将服务信息注册到 zk
 		String uriPath = servicePath + "/" + uri;
 		if (client.exists(uriPath)) {
 			client.delete(uriPath);
 		}
+		// 创建临时节点
 		client.createEphemeral(uriPath);
 	}
 }

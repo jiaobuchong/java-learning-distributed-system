@@ -20,6 +20,7 @@ public class ClientStubProxyFactory {
 
 	private ServiceInfoDiscoverer sid;
 
+	// 协议 map
 	private Map<String, MessageProtocol> supportMessageProtocols;
 
 	private NetClient netClient;

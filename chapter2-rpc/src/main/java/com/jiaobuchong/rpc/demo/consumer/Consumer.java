@@ -11,7 +11,9 @@ import java.awt.Point;
 import java.util.HashMap;
 import java.util.Map;
 
-
+/**
+ * 服务客户端
+ */
 public class Consumer {
 	public static void main(String[] args) throws Exception {
 
