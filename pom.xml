@@ -23,8 +23,8 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modules>
         <!--模块的相对路径-->
         <module>chapter1-zookeeper</module>
-        <module>chapter2-rpc</module>
-        <module>chapter2-dubbo</module>
+        <module>chapter2-0-dubbo</module>
+        <module>chapter2-1-rpc</module>
 
     </modules>
 
