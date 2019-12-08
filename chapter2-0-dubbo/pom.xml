@@ -35,6 +35,8 @@
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.alibaba.boot/dubbo-spring-boot-starter -->
+
+<!--        引用了这个包就不用在spring boot 的启动类上显式指定@EnableDubbo注解了-->
         <dependency>
             <groupId>com.alibaba.boot</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>

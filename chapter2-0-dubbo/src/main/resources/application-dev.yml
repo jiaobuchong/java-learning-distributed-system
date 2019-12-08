@@ -1,0 +1,12 @@
+spring:
+  main: 
+    allow-bean-definition-overriding: true
+server.port: 9000
+
+dubbo:
+  application:
+    name: consumer-service-app1
+  registry:
+    address: zookeeper://192.168.56.101:2181
+  consumer: 
+    timeout: 3000

@@ -1,4 +1,4 @@
-package com.jiaobuchong.rpc.demo.provider;
+package com.jiaobuchong.rpc.demo.api;
 
 import com.alibaba.dubbo.config.ApplicationConfig;
 import com.alibaba.dubbo.config.ProtocolConfig;
@@ -7,6 +7,10 @@ import com.alibaba.dubbo.config.ServiceConfig;
 import com.jiaobuchong.rpc.demo.DemoService;
 import com.jiaobuchong.rpc.demo.impl.DemoServiceImpl;
 
+/**
+ * api 的方式不需要xml和properties 的配置文件，
+ * 全部信息都写在这一个类里面
+ */
 public class ApiProviderConfiguration {
 
 	public static void main(String[] args) throws Exception {
@@ -18,7 +22,7 @@ public class ApiProviderConfiguration {
 		application.setName("hello-world-app");
 
 		// 连接注册中心配置。 请学习RegistryConfig的API
-		RegistryConfig registry = new RegistryConfig("224.5.6.7:1234", "multicast");
+		RegistryConfig registry = new RegistryConfig("192.168.56.101:2181", "zookeeper");
 
 		// 服务提供者协议配置
 		ProtocolConfig protocol = new ProtocolConfig();
