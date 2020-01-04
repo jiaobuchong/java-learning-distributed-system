@@ -9,7 +9,7 @@ import com.alibaba.dubbo.config.annotation.Reference;
 @RestController
 public class AnnotationDemoAction {
 
-	@Reference
+	@Reference(loadbalance = "roundrobin")
 	private DemoService demoService;
 
 	@RequestMapping("/hello")
