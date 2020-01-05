@@ -19,7 +19,7 @@ public class Example {
         SpringApplication springApplication = new SpringApplication(Example.class);
         springApplication.setAdditionalProfiles();
         Properties properties = new Properties();
-        properties.setProperty("name", "setDefaultProperties-tony");
+        properties.setProperty("names", "hhhhh jiaobuchong");
         springApplication.setDefaultProperties(properties);
         springApplication.run(args);
     }
