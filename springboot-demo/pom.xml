@@ -32,7 +32,7 @@
 
         <dependency>
             <groupId>com.jiaobuchong</groupId>
-            <artifactId>chapter3-my-starter</artifactId>
+            <artifactId>chapter3-spring-boot-starter</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
