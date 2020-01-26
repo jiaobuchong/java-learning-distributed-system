@@ -8,6 +8,7 @@ import java.util.Random;
 
 /**
  * 自定义检查项
+ * actuator
  */
 @Component
 public class MyHealthcheck extends AbstractHealthIndicator {

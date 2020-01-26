@@ -2,6 +2,7 @@
 # name: application-yml-tony
 # 可以使用随机值
 name: ${random.value}
+
 management:
   endpoints:
     web:

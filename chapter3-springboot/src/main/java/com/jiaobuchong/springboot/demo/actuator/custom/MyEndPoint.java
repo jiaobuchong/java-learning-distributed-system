@@ -10,17 +10,20 @@ public class MyEndPoint {
 
     String name = "default";
 
+    // 读取端点的操作
     @ReadOperation
     public String getName() {
         // spring http端点的json格式
         return "{\"name\":\""+name+"\"}";
     }
 
+    // 删除端点的值
     @DeleteOperation
     public void delName() {
         name = "";
     }
 
+    // 修改端点的值
     @WriteOperation
     public void setName(@Selector String name) {
         this.name = name;
